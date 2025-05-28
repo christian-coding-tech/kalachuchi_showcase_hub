@@ -11,7 +11,7 @@ A Django-based web application for showcasing products with teaser and catalog s
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/projectname.git
+git clone https://github.com/christian-coding-tech/kalachuchi_showcase_hub.git
 cd projectname
 
 GROUP members:
