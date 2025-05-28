@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/rules.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<div class="rules-section">
+    <h2 class="rules-title">Kalachuchi Shop Rules</h2>
+
+    <ul class="rules-list">
+        <li><strong>Payment First:</strong> All orders require payment upfront before shipping. We accept GCash and GoTyme.</li>
+
+        <li><strong>Cancellation Policy:</strong> No cancellations are allowed once an order is placed, regardless of whether payment has been made.</li>
+
+        <li><strong>Bugos Buyers:</strong> We have a zero-tolerance policy for bugos buyers. Any customer who fails to complete their purchase after confirming will be publicly posted and blocked from future transactions.</li>
+
+        <li>
+            <strong>Shipping:</strong>
+            <ul>
+                <li><strong>Tacloban & Palo:</strong> Delivery via Maxim. Estimated shipping: ₱50–₱150.</li>
+                <li>
+                    <strong>Flash Express (Nationwide):</strong>
+                    <ul>
+                        <li><strong>Luzon:</strong> ₱100</li>
+                        <li><strong>Mindanao:</strong> ₱100</li>
+                        <li><strong>Visayas:</strong> ₱80</li>
+                    </ul>
+                </li>
+                <li><strong>Meetup Option:</strong> Available in Tacloban City (ACLC Real Tacloban) upon arrangement.</li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>Delivery:</strong>
+            <ul>
+                <li>Shipping times vary by location and availability.</li>
+                <li>Tracking number provided after shipping.</li>
+            </ul>
+        </li>
+
+        <li><strong>Returns & Exchanges:</strong> Not available. Please review all item descriptions and photos carefully before purchasing.</li>
+    </ul>
+
+    <div class="back-link">
+        <a href="{% url 'home' %}">← Back to Home</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,95 @@
+.social-wrapper {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1s ease;
+}
+
+.social-title {
+    font-size: 2.2rem;
+    color: #d63384;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 0.8s ease;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.social-card:hover img {
+    transform: scale(1.05);
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.social-content {
+    flex: 1;
+}
+
+.social-content p {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.social-content a {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.social-card.facebook {
+    background-color: #eef3fb;
+}
+
+.social-card.facebook a {
+    color: #3b5998;
+}
+
+.social-card.facebook a:hover {
+    text-shadow: 0 0 8px #3b5998aa;
+}
+
+.social-card.instagram {
+    background-color: #fff0f7;
+}
+
+.social-card.instagram a {
+    color: #C13584;
+}
+
+.social-card.instagram a:hover {
+    text-shadow: 0 0 8px #C13584aa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

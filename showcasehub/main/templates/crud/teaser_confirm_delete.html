@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/delete.css' %}">
+
+<div class="form-wrapper">
+    <h2 class="form-title">Confirm Delete</h2>
+    <p style="text-align: center; font-size: 1.2rem;">
+        Are you sure you want to delete "<strong>{{ teaser.title }}</strong>"?
+    </p>
+
+    <form method="post" class="teaser-form">
+        {% csrf_token %}
+        <div class="form-buttons">
+            <button type="submit" class="btn-pink">Yes, Delete</button>
+            <a href="{% url 'teaser_page' %}" class="btn-outline">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

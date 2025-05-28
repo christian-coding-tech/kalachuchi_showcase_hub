@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* ===== Body with animated gradient background ===== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #ffc0cb, #ffb6c1, #ffe4e1);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    transition: background 0.5s ease;
+}
+
+@keyframes gradientBG {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== Layout ===== */
+.catalog-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px 30px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.catalog-detail-image {
+    width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.catalog-detail-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+}
+
+.catalog-detail-info {
+    max-width: 600px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.catalog-detail-info:hover {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+}
+
+/* ===== Text ===== */
+.catalog-detail-info h2 {
+    color: #e91e63;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.catalog-detail-info p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+/* ===== Buttons ===== */
+.btn-pink,
+.btn-outline {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-pink {
+    background: #ff69b4;
+    color: #fff;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-pink:hover {
+    background: #e91e63;
+    transform: scale(1.08);
+}
+
+.btn-outline {
+    border: 2px solid #ff69b4;
+    color: #ff69b4;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: #ff69b4;
+    color: #fff;
+    transform: scale(1.08);
+}

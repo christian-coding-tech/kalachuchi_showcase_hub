@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalachuchi Showcase Hub</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+
+    <header class="main-header rotating-header">
+        <div class="bg-slide"></div>
+        <div class="bg-slide"></div>
+
+        <div class="header-content">
+            <h1 class="site-title">Kalachuchi Showcase Hub</h1>
+            <div class="auth-links">
+                {% if user.is_authenticated %}
+                    <p>Hello, <strong>{{ user.username }}</strong> | <a href="{% url 'logout' %}">Logout</a></p>
+                {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+
+    <nav class="main-nav">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'about' %}">About Us</a>
+    </nav>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="main-footer">
+        Kalachuchi: Vintage treasures, new life. Shop our curated selection of pre-loved finds!
+    </footer>
+</body>
+</html>

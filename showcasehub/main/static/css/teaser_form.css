@@ -1,0 +1,72 @@
+/* teaser_form.css */
+
+.teaser-form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff0f4;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.teaser-form-container h2 {
+  color: #d63384;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.teaser-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.teaser-form-container input[type="text"],
+.teaser-form-container input[type="file"],
+.teaser-form-container textarea,
+.teaser-form-container select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.teaser-form-container input[type="text"]:focus,
+.teaser-form-container input[type="file"]:focus,
+.teaser-form-container textarea:focus,
+.teaser-form-container select:focus {
+  border-color: #d63384;
+  box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.2);
+  outline: none;
+}
+
+.teaser-form-container .btn-primary {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #d63384;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.teaser-form-container .btn-primary:hover {
+  background-color: #b8296f;
+}
+
+.teaser-form-container .back-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #6c757d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.teaser-form-container .back-link:hover {
+  color: #343a40;
+}

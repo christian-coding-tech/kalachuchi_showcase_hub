@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+<div class="form-wrapper">
+    <h2 class="form-title">
+        {% if teaser %}Edit{% else %}Add{% endif %} Teaser Item
+    </h2>
+
+    <form method="post" enctype="multipart/form-data" class="teaser-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-buttons">
+            <button type="submit" class="btn-pink">Save</button>
+            <a href="{% url 'teaser_page' %}" class="btn-outline">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

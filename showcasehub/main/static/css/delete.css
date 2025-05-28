@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(270deg, #ffc0cb, #ffb6c1, #ffe4e1);
+    background-size: 600% 600%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #d63384;
+    margin-bottom: 30px;
+}
+
+.teaser-form label {
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn-pink, .btn-outline {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-pink {
+    background-color: #e91e63;
+    color: white;
+}
+
+.btn-pink:hover {
+    background-color: #c2185b;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #e91e63;
+    border: 2px solid #e91e63;
+}
+
+.btn-outline:hover {
+    background-color: #e91e63;
+    color: white;
+}

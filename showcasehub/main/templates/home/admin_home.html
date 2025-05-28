@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2>User Feedback</h2>
+    {% for fb in feedbacks %}
+        <div class="card my-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ fb.user.username }} - {{ fb.created_at|date:"M d, Y H:i" }}</h5>
+                <p class="card-text">{{ fb.message }}</p>
+            </div>
+        </div>
+    {% empty %}
+        <p>No feedback yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

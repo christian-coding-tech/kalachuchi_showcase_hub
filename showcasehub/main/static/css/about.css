@@ -1,0 +1,48 @@
+.about-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #fffaf5;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    animation: fadeIn 1s ease;
+}
+
+.about-title {
+    font-size: 2.2rem;
+    color: #f28500;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    animation: fadeInDown 0.8s ease;
+}
+
+.about-section p {
+    margin-bottom: 16px;
+    color: #333;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+.about-section p:hover {
+    color: #444;
+}
+
+.about-section .closing {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #c24d2c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

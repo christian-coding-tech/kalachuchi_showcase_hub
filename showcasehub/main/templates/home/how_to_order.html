@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/howtoorder.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<div class="order-section">
+    <h2 class="order-title">How to Order from Kalachuchi</h2>
+
+    <ol class="order-steps">
+        <li><strong>Browse Our Catalog:</strong> Explore our collection of vintage treasures! Click on the items you'd like to purchase.</li>
+        <li><strong>Check Out:</strong> Once you've chosen your items, simply click "Check Out."</li>
+        <li><strong>Direct Link to Seller:</strong> You'll be directly linked to our seller (that’s me!), where you’ll receive instructions on how to make your payment.</li>
+        <li><strong>Payment:</strong> Pay using GCash or GoTyme as instructed.</li>
+        <li><strong>Shipping Information:</strong> Once payment is confirmed, we’ll ask you to provide your full name, full address, contact number, and helpful landmarks for smooth delivery.</li>
+        <li><strong>Shipping:</strong> We’ll ship your items via Flash Express (nationwide) or Maxim (Tacloban & Palo).</li>
+        <li><strong>Tracking Code:</strong> You’ll receive a Messenger message with a tracking code once your order is shipped.</li>
+    </ol>
+
+    <div class="back-link">
+        <a href="{% url 'home' %}">← Back to Home</a>
+    </div>
+</div>
+
+{% endblock %}

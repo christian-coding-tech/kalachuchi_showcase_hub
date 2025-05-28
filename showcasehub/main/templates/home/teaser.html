@@ -1,0 +1,60 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/teaser.css' %}">
+
+<div class="teaser-header">
+    <h1>Coming Soon</h1>
+    {% if user.is_staff %}
+    <div class="admin-buttons">
+        <a href="{% url 'create_teaser' %}" class="btn-pink">Add Teaser Item</a>
+        <a href="{% url 'catalog_page' %}" class="btn-outline">View Catalog</a>
+    </div>
+    {% endif %}
+</div>
+
+<div class="product-grid">
+    {% for teaser in page_obj %}
+    <div class="product-card">
+        <div class="hover-card">
+            <img src="{{ teaser.image.url }}" alt="{{ teaser.title }}">
+            <div class="card-overlay">
+                <p><strong>Release Date:</strong> {{ teaser.created_at|date:"M d, Y" }}</p>
+                <p><strong>Seller:</strong> {{ teaser.seller_name }}</p>
+                <p><strong>Store:</strong> {{ teaser.store_name }}</p>
+                <p><strong>Location:</strong> {{ teaser.store_location }}</p>
+            </div>
+        </div>
+        <div class="card-content">
+            <h2>{{ teaser.title }}</h2>
+            <p>{{ teaser.description }}</p>
+            <small>Available: {{ teaser.Available }}</small>
+            {% if user.is_staff %}
+            <div class="admin-actions">
+                <a href="{% url 'edit_teaser' teaser.pk %}" class="btn-pink">Edit</a>
+                <a href="{% url 'delete_teaser' teaser.pk %}" class="btn-outline">Delete</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; First</a>
+            <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">Next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock %}

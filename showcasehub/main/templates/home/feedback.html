@@ -1,0 +1,16 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/feedback.css' %}">
+
+<div class="form-wrapper">
+    <h2 class="form-title">Leave Your Feedback</h2>
+    <form method="post" class="teaser-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form-buttons">
+            <button type="submit" class="btn-pink">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

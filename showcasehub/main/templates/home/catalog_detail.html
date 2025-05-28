@@ -1,0 +1,26 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/catalog_detail.css' %}">
+
+<div class="catalog-detail-container">
+    <img src="{{ item.image.url }}" alt="{{ item.title }}" class="catalog-detail-image">
+
+    <div class="catalog-detail-info">
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.description }}</p>
+
+        <p><strong>Release Date:</strong> {{ item.created_at|date:"M d, Y" }}</p>
+        <p><strong>Seller Name:</strong> {{ item.seller_name }}</p>
+        <p><strong>Store Name:</strong> {{ item.store_name }}</p>
+        <p><strong>Store Location:</strong> {{ item.store_location }}</p>
+
+        <p><strong>Store Link:</strong>
+            <a href="{{ item.store_link }}" target="_blank" class="btn-pink">Visit Store</a>
+        </p>
+
+        <a href="{% url 'catalog_page' %}" class="btn-outline" style="margin-top: 20px;">← Back to Catalog</a>
+    </div>
+</div>
+{% endblock %}

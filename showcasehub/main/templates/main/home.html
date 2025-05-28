@@ -1,0 +1,57 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<div class="home-container">
+    <h2 class="home-heading">Welcome to Kalachuchi Showcase Hub</h2>
+    <p class="home-subheading">Explore our collection and features below:</p>
+
+    <div class="card-grid">
+        <a href="{% url 'teaser_page' %}" class="card-link">
+            <img src="{% static 'images/teaser.png' %}" alt="Teaser" class="card-img">
+            <h3 class="card-title">Teaser</h3>
+        </a>
+        <a href="{% url 'catalog_page' %}" class="card-link">
+            <img src="{% static 'images/catalog.png' %}" alt="Catalog" class="card-img">
+            <h3 class="card-title">Catalog</h3>
+        </a>
+        <a href="{% url 'social' %}" class="card-link">
+            <img src="{% static 'images/social.jpg' %}" alt="Social" class="card-img">
+            <h3 class="card-title">Social</h3>
+        </a>
+        <a href="{% url 'rules' %}" class="card-link">
+            <img src="{% static 'images/rules.jpg' %}" alt="Rules" class="card-img">
+            <h3 class="card-title">Rules</h3>
+        </a>
+        <a href="{% url 'how_to_order' %}" class="card-link">
+            <img src="{% static 'images/howtoorder.png' %}" alt="How to Order" class="card-img">
+            <h3 class="card-title">How to Order</h3>
+        </a>
+        <a href="{% url 'feedback' %}" class="card-link">
+            <img src="{% static 'images/feedback.png' %}" alt="Feedback" class="card-img">
+            <h3 class="card-title">Feedback</h3>
+        </a>
+    </div>
+    {% if feedbacks %}
+<div class="admin-feedback mt-5">
+    <h2 class="feedback-heading">User Feedback</h2>
+    {% for fb in feedbacks %}
+        <div class="feedback-card">
+            <h4>
+                {% if fb.user %}
+                    {{ fb.user.username }}
+                {% else %}
+                    Anonymous
+                {% endif %}
+                <small>({{ fb.created_at|date:"M d, Y H:i" }})</small>
+            </h4>
+            <p>{{ fb.message }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+</div>
+{% endblock %}

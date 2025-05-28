@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/social.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<div class="social-wrapper">
+    <h2 class="social-title">Follow Us on Social Media</h2>
+
+    <div class="social-card facebook">
+        <img src="{% static 'images/header2.jpeg' %}" alt="Facebook Logo">
+        <div class="social-content">
+            <p>Stay connected with us on Facebook for the latest updates and vintage treasures!</p>
+            <a href="https://www.facebook.com/share/1He7Vt9kgv/?mibextid=wwXIfr" target="_blank">
+                Visit Kalachuchi Official Facebook Page
+            </a>
+        </div>
+    </div>
+
+    <div class="social-card instagram">
+        <img src="{% static 'images/header2.jpeg' %}" alt="Instagram Logo">
+        <div class="social-content">
+            <p>Explore our latest thrifted finds and reels on Instagram!</p>
+            <a href="https://www.instagram.com/kalachuchi_ph1?igsh=ZXhldmV6ejFmZ2E5" target="_blank">
+                Visit Kalachuchi Official Instagram Page
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

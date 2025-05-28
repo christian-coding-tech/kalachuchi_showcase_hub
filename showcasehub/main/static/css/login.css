@@ -1,0 +1,114 @@
+/* General Page Style */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Container Styling */
+.login-container {
+    background-color: #fff0f5;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 380px;
+    text-align: center;
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Title */
+.login-title {
+    color: #d63384;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    animation: popIn 0.6s ease;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff4d6d;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Login Form Styling */
+.login-form {
+    display: grid;
+    gap: 15px;
+    text-align: left;
+}
+
+.login-form label {
+    display: flex;
+    flex-direction: column;
+    color: #d63384;
+    font-weight: 500;
+    font-size: 14px;
+    animation: fadeIn 1s ease-in;
+}
+
+.input-field {
+    margin-top: 5px;
+    padding: 12px;
+    border: 1px solid #f8c8dc;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.input-field:focus {
+    border-color: #ff69b4;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+    transform: scale(1.02);
+    outline: none;
+}
+
+/* Buttons */
+.login-button, .visit-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #ff69b4, #ff85c1);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease-in;
+}
+
+.login-button:hover, .visit-button:hover {
+    background: linear-gradient(90deg, #ff85c1, #ff69b4);
+    transform: translateY(-2px) scale(1.01);
+}
+
+/* Visit Form */
+.visit-form {
+    margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
